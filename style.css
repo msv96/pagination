@@ -17,16 +17,16 @@ h1 {
 }
 .list {
     justify-content: center;
-	margin: 25px;
+	margin: 25px 0px;
 	gap: 30px;
 }
 .item {
 	background-color: #8F71D7;
+	font-size: 16px;
 	color: white;
 	padding: 15px;
 	display: grid;
-    grid-template-columns: 100px 250px;
-    justify-content: center;
+    grid-template-columns: 70px 250px;
 	gap: 10px;
 	border-radius: 10px;
 }
@@ -47,39 +47,46 @@ h1 {
 	text-align: center;
     border-radius: 20%;
     color: white;
-    background-color: #830069;
+    background-color: #007FDC;
 }
 .pageNo button:hover {
-	background-color: #8879AC;
+	background-color: #830069;
 }
 .pageNo button.active {
 	background-color: #43BEA5;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 300px) and (max-width: 800px) {
 	.list {
 		display: grid;
-		grid-template-columns: 400px;
+		grid-template-columns: 350px;
 	}
 }
 
-@media (min-width: 900px) {
+@media (min-width: 801px) and (max-width: 1200px) {
 	.list {
 		display: grid;
-		grid-template-columns: 400px 400px;
+		grid-template-columns: 350px 350px;
 	}
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1201px) and (max-width: 1600px) {
 	.list {
 		display: grid;
-		grid-template-columns: 400px 400px 400px;
+		grid-template-columns: 350px 350px 350px;
 	}
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1601px) and (max-width: 2000px) {
 	.list {
 		display: grid;
-		grid-template-columns: 400px 400px 400px 400px;
+		grid-template-columns: 350px 350px 350px 350px;
+	}
+}
+
+@media (min-width: 2001px) {
+	.list {
+		display: grid;
+		grid-template-columns: 350px 350px 350px 350px 350px;
 	}
 }
