@@ -14,7 +14,7 @@ const list = document.getElementById('lists');
 const pagination = document.getElementById('pagination');
 
 let currentPage = 1;
-let rows = 24;
+let rows = 12;
 
 function displayList(items, wrapper, perPage, page) {
     wrapper.innerHTML = "";
