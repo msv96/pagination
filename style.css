@@ -77,16 +77,16 @@ h1 {
 	}
 }
 
-@media (min-width: 1601px) and (max-width: 2200px) {
+@media (min-width: 1601px) and (max-width: 2000px) {
 	.list {
 		display: grid;
 		grid-template-columns: 350px 350px 350px 350px;
 	}
 }
 
-@media (min-width: 2201px) {
+@media (min-width: 2001px) {
 	.list {
 		display: grid;
-		grid-template-columns: 350px 350px 350px 350px 350px 350px;
+		grid-template-columns: 350px 350px 350px 350px 350px;
 	}
 }
