@@ -5,7 +5,7 @@ async function getData() {
     const listItems = await data.json();
 
     displayList(listItems, list, rows, currentPage);
-    
+
     paginationSetup(listItems, pagination, rows);
 }
 getData();
@@ -32,7 +32,7 @@ function displayList(items, wrapper, perPage, page) {
         `<div>Name</div>
         <div>${item.name}</div>
         <div>Email ID</div>
-        <div>${item.email}</div>`;
+        <a href="mailto:${item.email}" class="mailId">${item.email}</a>`;
 
         wrapper.append(userContainer);
     });
@@ -40,12 +40,12 @@ function displayList(items, wrapper, perPage, page) {
 
 function paginationSetup(items, wrapper, perPage) {
     wrapper.innerHTML = "";
-    
+
     let pageCount = Math.ceil(items.length / perPage);
 
     for(let i = 1; i < pageCount + 1; i++) {
         let btn = paginationButton(i, items);
-        wrapper.append(btn);
+        wrapper.appendChild(btn);
     }
 }
 
@@ -53,17 +53,18 @@ function paginationButton(page, items) {
     let button = document.createElement('button');
     button.innerText = page;
 
-    if(currentPage == page) {
+    if(currentPage == page)
         button.classList.add('active');
-    }
-    button.addEventListener('click', function () {
-        currentPage = page;
-        displayList(items, list, rows, currentPage);
+    
+        button.addEventListener('click', function () {
 
-        let currentButton = document.querySelector('.pageNo button.active');
-        currentButton.classList.remove('active');
+            currentPage = page;
+            displayList(items, list, rows, currentPage);
 
-        button.classList.add('active');
-    });
+            let currentButton = document.querySelector('.pageNo button.active');
+            currentButton.classList.remove('active');
+
+            button.classList.add('active');
+        });
     return button;    
 }
