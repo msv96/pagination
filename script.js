@@ -45,7 +45,7 @@ function paginationSetup(items, wrapper, perPage) {
 
     for(let i = 1; i < pageCount + 1; i++) {
         let btn = paginationButton(i, items);
-        wrapper.appendChild(btn);
+        wrapper.append(btn);
     }
 }
 
