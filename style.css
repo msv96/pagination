@@ -25,9 +25,12 @@ h1 {
 	color: white;
 	padding: 15px;
 	display: grid;
-    grid-template-columns: 70px 1fr;
+	grid-template-columns: 70px 1fr;
 	gap: 10px;
 	border-radius: 10px;
+}
+.mailId {
+	text-decoration: none;
 }
 .pageNo {
 	display: flex;
@@ -43,9 +46,9 @@ h1 {
 	margin: 20px 5px 20px 5px;
 	font-size: 18px;
 	text-align: center;
-    border-radius: 20%;
-    color: white;
-    background-color: purple;
+	border-radius: 20%;
+	color: white;
+	background-color: purple;
 }
 .pageNo button:hover {
 	background-color: darkorange;
